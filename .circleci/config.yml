@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run:
+          name: Install npm
+          command: 'npm install'
+      - run:
+          name: Download up
+          command: 'curl https://i.jpillora.com/apex/up | bash'
+      - run:
+          name: Deploy
+          command: './up deploy production'

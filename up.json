@@ -1,0 +1,13 @@
+{
+  "name": "announce",
+  "hooks": {
+    "build":
+      "curl -sL https://nodejs.org/dist/v8.5.0/node-v8.5.0-linux-x64.tar.xz | tar xJ"
+  },
+  "proxy": {
+    "command": "./node-v8.5.0-linux-x64/bin/node app.js"
+  },
+  "lambda": {
+    "memory": 1024
+  }
+}
