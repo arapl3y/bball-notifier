@@ -19,11 +19,11 @@ app.get("/check", async (req, res) => {
 
   if (!result) {
     res.send({
-      message: "No scheduled games tomorrow"
+      message: "No scheduled game tomorrow"
     });
     return;
   }
-  await sendMessage(`Hey guys, the game is at ${result}.`);
+  await sendMessage(`Hey guys, game time: ${result}.`);
 
   res.send({
     message: "Message sent"
