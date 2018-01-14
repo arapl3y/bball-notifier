@@ -1,3 +1,11 @@
 const { sendMessage } = require("../lib/facebook.js");
+const { listThreads } = require("../lib/facebook.js");
 
-sendMessage("Hello");
+// listThreads().then(arr => {
+//   console.log(arr);
+// });
+
+sendMessage('WardellBot test')
+  .catch(err => {
+    console.error(err);
+  });

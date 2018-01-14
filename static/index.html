@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="checker">Check</button>
+  <div>
+    Status: <span id="status"></span>
+  </div>
+
+  <script type="text/javascript">
+    var check = document.querySelector('#checker');
+    var httpStatus = document.getElementById('status');
+
+    check.addEventListener ('click', function() {
+      fetch('/check').then(function(response) {
+        console.log(response.status)
+        httpStatus.textContent = response.status === 200 ? `Success ${response.status}` :  `Failure ${response.status}`;
+      })
+    })
+  </script>
+</body>
+</html>
