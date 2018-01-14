@@ -1,7 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
 const sbl = require("./lib/sbl");
-const { extract } = require("./lib/schedule");
 const { sendMessage } = require("./lib/facebook");
 const { PORT = 3000 } = process.env;
 const app = express();
