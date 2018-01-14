@@ -1,0 +1,12 @@
+[Unit]
+Description=bball-notifier
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/bball-notifier
+ExecStart=/usr/local/bin/node app.js
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
