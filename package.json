@@ -5,8 +5,8 @@
   "dependencies": {
     "axios": "^0.16.2",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.15.4",
+    "express": "^4.17.1",
     "facebook-chat-api": "git+https://git@github.com/ravkr/facebook-chat-api",
-    "morgan": "^1.8.2"
+    "morgan": "^1.9.1"
   }
 }
